@@ -105,6 +105,7 @@
     
     .nav-icon::before {
         font-size: 20px;
+        color: black;
     }
     
     .nav-col {
@@ -125,6 +126,11 @@
         margin: 5px 0px 0 7px;
         font-weight: bold;
         font-size: 15px;
+        color: black;
+    }
+    
+    .nav-text:hover {
+        color: orange;
     }
     
     .sivy-oddelovac-2 {
@@ -170,7 +176,7 @@
     ================================================== */
     
     .img-responsive {
-        width: 10%;
+        width: 60%;
     }
     /* Animacia on scroll */
     

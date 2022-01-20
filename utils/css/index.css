@@ -102,7 +102,7 @@
 /* Footer */
 
 footer {
-    background-image: url('/photos/images/backgrounf-footer.png') !important;
+    background-image: url('../../photos/images/backgrounf-footer.png') !important;
     margin-top: 40px;
 }
 

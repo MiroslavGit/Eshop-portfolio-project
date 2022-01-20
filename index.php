@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -11,8 +17,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- CSS links -->
-    <link rel="stylesheet" href="utils/css/nav.css">
-    <link rel="stylesheet" href="utils/css/index.css">
+    <link rel="stylesheet" href="utils/css/nav.css?<?php echo time(); ?>">
+    <link rel="stylesheet" href="utils/css/index.css?<?php echo time(); ?>">
 
 
     <!-- Font awesome -->
@@ -63,11 +69,25 @@
                     <span class="nav-text">Wishlist</span>
                     <span class="sivy-oddelovac-2  ps-3"></span>
                 </div>
-                <div class="col-lg-1 col-md-2 col-2 nav-col">
-                    <i class="fa fa-user-circle nav-icon ps-4"></i>
-                    <span class="nav-text">Log in</span>
-                    <span class="sivy-oddelovac-2  ps-2"></span>
-                </div>
+                <?php
+                if (isset($_SESSION['userNickname'])) {
+                    echo '<div class="col-lg-1 col-md-2 col-2 nav-col">';
+                    echo '<a href="pages/account.php">';
+                    echo '<i class="fa fa-user-circle nav-icon ps-4"></i>';
+                    echo '<span class="nav-text ">Account</span>';
+                    echo '</a>';
+                    echo '<span class="sivy-oddelovac-2  ps-3"></span>';
+                    echo '</div>';
+                } else {
+                    echo '<div class="col-lg-1 col-md-2 col-2 nav-col">';
+                    echo '<a href="pages/login-registration.php">';
+                    echo '<i class="fa fa-user-circle nav-icon ps-4"></i>';
+                    echo '<span class="nav-text">Log in</span>';
+                    echo '</a>';
+                    echo '<span class="sivy-oddelovac-2  ps-2"></span>';
+                    echo '</div>';
+                }
+                ?>
                 <div class="col-lg-1 col-md-2 col-2 nav-col d-flex ms-lg-3 ">
                     <i class="fa fa-shopping-bag nav-icon ps-2"></i>
                     <span class="nav-text ms-4  ps-2">$ 0,00 </span>
@@ -86,9 +106,11 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <!-- Logo -->
-                    <img class="img-responsive"
-                        src="https://cdn.shopify.com/s/files/1/0242/3141/1792/t/217/assets/dklogo.svg?v=13222878580213202190"
-                        title="logo">
+                    <a href="index.php">
+                        <img class="img-responsive"
+                            src="https://cdn.shopify.com/s/files/1/0242/3141/1792/t/217/assets/dklogo.svg?v=13222878580213202190"
+                            title="logo" alt="title">
+                    </a>
                     <!-- Togler -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -101,7 +123,7 @@
                             <li class="nav-item active">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                    HOME
+                                    MENS
                                 </a>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#">Action</a>
@@ -119,9 +141,6 @@
                                     <a class="dropdown-item" href="#">Something else here</a>
                                 </div>
 
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link " aria-current="page" href="#">MENS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">WOMENS</a>
@@ -547,7 +566,7 @@
     <script src="utils/js/jquery-3.6.0.js"></script>
 
     <!-- Custom script links -->
-    <script src="utils/js/script.js"></script>
+    <script src="utils/js/script.js?<?php echo time(); ?>"></script>
 
 </body>
 

@@ -1,0 +1,7 @@
+.btn-none {
+    color: black !important;
+}
+
+.btn-none:hover {
+    color: orange !important;
+}
