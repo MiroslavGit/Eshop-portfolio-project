@@ -121,8 +121,9 @@ session_start();
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                         <ul class="navbar-nav ms-auto py-3 me-auto mb-2 mb-lg-0 active ">
                             <li class="nav-item active">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                <a class="nav-link dropdown-toggle" href="pages/collection/mens.php"
+                                    id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false" aria-haspopup="true">
                                     MENS
                                 </a>
                                 <div class="dropdown-menu">
@@ -143,7 +144,7 @@ session_start();
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">WOMENS</a>
+                                <a class="nav-link" href="pages/mens.php">WOMENS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">SPORT</a>

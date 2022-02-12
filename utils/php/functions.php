@@ -122,19 +122,6 @@ function createUser($conn, $name, $email, $nickname, $password1)
 }
 
 
-//funkcia ktora kontroluje či sú všetky polia pri prihláseni vyplnené, či nie su prázdne
-
-function emptyInputLogin($nickname, $password)
-{
-    $result;  // premenna ktora je true alebo false
-    if (empty($nickname) || empty($password)) {
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
-}
-
 // tato funkcia prihlasuje užívateľa ak uživatel existuje
 
 function loginUser($conn, $nickname, $password)
@@ -154,10 +141,10 @@ function loginUser($conn, $nickname, $password)
     $checkPassword = password_verify($password, $passwordHashed);
 
     // podmienka - ak sa heslo zadane uzivatelom nezhoduje s heslom v databaze tak to returne false
-    if ($checkPassword == true) {
+    if ($checkPassword == false) {
         header("Location: ../../pages/login-registration.php?error=wrongpwd");
         exit();
-    } elseif ($checkPassword == false) {
+    } elseif ($checkPassword == true) {
         // session znamena, ze ten uzivatel bude prihlaseny aj ked sa bude preklikavat na inych podstrankach
         session_start();
         // v [] pri _SESSION zadavame nazov super globalnej premennej ktoru mozeme pouzit potom na hocijakej stranke - ak chceme ziskat pristup k id uzivatela alebo nickname uzivatela z databazy

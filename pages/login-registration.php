@@ -4,6 +4,7 @@ include("../utils/php/header.php")
 
 <head>
     <link rel="stylesheet" href="../utils/css/login-registration.css?<?php echo time(); ?>">
+    <script refer src="../utils/js/showErorModal.js?<?php echo time(); ?>"></script>
 </head>
 
 <div class="container-fluid login-container">
@@ -65,24 +66,23 @@ include("../utils/php/header.php")
         <?php
         if (isset($_GET['error'])) {
             if ($_GET['error'] == "emptyinput") {
-                echo "Vyplň polia !";
+                echo '<script type="text/javascript">showErorModal("Empty Input !");</script>';
             } else if ($_GET['error'] == "invalidUid") {
-                echo "Zlý invalidUid !";
+                echo '<script type="text/javascript">showErorModal("Invalid Username !");</script>';
             } else if ($_GET['error'] == "invalidEmail") {
-                echo "Zlý invalidEmail !";
+                echo '<script type="text/javascript">showErorModal("Invalid Email !");</script>';
             } else if ($_GET['error'] == "passwordsDontMatch") {
-                echo "Zlý passwordsDontMatch !";
+                echo '<script type="text/javascript">showErorModal("Password do not match !");</script>';
             } else if ($_GET['error'] == "nicknameTaken") {
-                echo "Zly  nickname
-                Taken!";
+                echo '<script type="text/javascript">showErorModal("Username or Email Taken !");</script>';
             } else if ($_GET['error'] == "stmtFailed") {
-                echo "Nepíš mi tu SQL kod :) !";
+                echo '<script type="text/javascript">showErorModal("Invladit Input !");</script>';
             } else if ($_GET['error'] == "signUpSuccesful") {
-                echo "Gratulujem :) !";
+                echo '<script type="text/javascript">showErorModal("SignUp Succesful !");</script>';
             } else if ($_GET['error'] == "wrongpwd") {
-                echo "Zle heslo :) !";
+                echo '<script type="text/javascript">showErorModal("Wrong Password !");</script>';
             } else if ($_GET['error'] == "wrongnick ") {
-                echo "zly nick :) !";
+                echo '<script type="text/javascript">showErorModal("Wrong Nick !");</script>';
             }
         }
 

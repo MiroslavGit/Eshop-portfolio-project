@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 
     // nickname uz exituje v databaze
     if (uidExist($conn, $nickname, $email) !== false) {
-        header("location: ../../pages/login-registration.php?error=nicknameTaken" . $nickname); // toto je vypis v url prehliadaci
+        header("location: ../../pages/login-registration.php?error=nicknameTaken"); // toto je vypis v url prehliadaci
         exit();
     }
 
