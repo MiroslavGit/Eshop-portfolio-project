@@ -81,7 +81,7 @@ include("../utils/php/header.php")
                 echo '<script type="text/javascript">showErorModal("SignUp Succesful !");</script>';
             } else if ($_GET['error'] == "wrongpwd") {
                 echo '<script type="text/javascript">showErorModal("Wrong Password !");</script>';
-            } else if ($_GET['error'] == "wrongnick ") {
+            } else if ($_GET['error'] == "wrongnick") {
                 echo '<script type="text/javascript">showErorModal("Wrong Nick !");</script>';
             }
         }

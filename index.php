@@ -144,7 +144,7 @@ session_start();
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/mens.php">WOMENS</a>
+                                <a class="nav-link" href="pages/womens.php">WOMENS</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">SPORT</a>

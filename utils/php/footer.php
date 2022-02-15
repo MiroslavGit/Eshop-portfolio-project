@@ -131,7 +131,7 @@
 </script>
 
 <!-- jquery -->
-<script src="../utils/js/jquery-3.6.0.js"></script>
+<script src="../utils/js/jquery-3.6.0.js?<?php echo time(); ?>"></script>
 
 <!-- Custom script links -->
 <script refer src="../utils/js/script.js?<?php echo time(); ?>"></script>

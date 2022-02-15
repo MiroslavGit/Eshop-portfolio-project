@@ -1,0 +1,156 @@
+/* Dropdown */
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dd-button {
+    display: inline-block;
+    padding: 10px 30px 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.dd-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+}
+
+.dd-input {
+    display: none;
+}
+
+.dd-menu {
+    position: absolute;
+    top: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0;
+    margin: 2px 0 0 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    list-style-type: none;
+    margin-left: 10px;
+}
+
+.dd-input+.dd-menu {
+    display: none;
+}
+
+.dd-input:checked+.dd-menu {
+    display: block;
+}
+
+.dd-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dd-menu li:hover {
+    background-color: #f6f6f6;
+}
+
+
+/* Categories */
+
+ul {
+    list-style-type: none;
+}
+
+li:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+
+/* Dropdown Categories */
+
+.parent {
+    background: #fff;
+    padding: 20px;
+    max-width: 400px;
+    margin-top: -15px;
+}
+
+.parent .child {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.37);
+    padding: 15px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.parent .child-dropdown {
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    margin: 0 15px;
+    z-index: 0;
+}
+
+.parent .child-dropdown {
+    height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.parent .child-dropdown.expanded {
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.parent .child-dropdown>* {
+    margin-top: 5px;
+}
+
+.parent .child-dropdown>*:hover {
+    color: orange;
+    text-decoration: underline orange;
+    cursor: pointer;
+}
+
+.color {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+#black {
+    background-color: black;
+}
+
+#white {
+    background-color: white;
+    border: 1px solid black;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#grey {
+    background-color: grey;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
